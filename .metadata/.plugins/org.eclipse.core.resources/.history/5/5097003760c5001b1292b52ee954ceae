@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/tarifas
+spring.datasource.username=postgres
+spring.datasource.password=051217
+spring.jpa.hibernate.ddl-auto=update

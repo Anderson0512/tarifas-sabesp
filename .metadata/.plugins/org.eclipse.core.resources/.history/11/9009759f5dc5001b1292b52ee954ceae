@@ -1,0 +1,196 @@
+package com.api.tarifas.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Tarifa {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long codigo;
+	
+	private Double faixa1;
+	
+	private Double faixa2;
+	
+	private Double faixa3;
+	
+	private Double faixa4;
+	
+	private Double faixa5;
+	
+	private Double taxaReg;
+	
+	private String tipoConsumidor;
+	
+	@ManyToOne
+	@JoinColumn(name="fk_codigo_categoria")
+	private Categoria categoria;
+	
+	
+
+	public Long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
+
+	public Double getFaixa1() {
+		return faixa1;
+	}
+
+	public void setFaixa1(Double faixa1) {
+		this.faixa1 = faixa1;
+	}
+
+	public Double getFaixa2() {
+		return faixa2;
+	}
+
+	public void setFaixa2(Double faixa2) {
+		this.faixa2 = faixa2;
+	}
+
+	public Double getFaixa3() {
+		return faixa3;
+	}
+
+	public void setFaixa3(Double faixa3) {
+		this.faixa3 = faixa3;
+	}
+
+	public Double getFaixa4() {
+		return faixa4;
+	}
+
+	public void setFaixa4(Double faixa4) {
+		this.faixa4 = faixa4;
+	}
+	
+	
+
+	public Double getFaixa5() {
+		return faixa5;
+	}
+
+	public void setFaixa5(Double faixa5) {
+		this.faixa5 = faixa5;
+	}
+
+	public Double getTaxaReg() {
+		return taxaReg;
+	}
+
+	public void setTaxaReg(Double taxaReg) {
+		this.taxaReg = taxaReg;
+	}
+	
+	
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	
+	
+
+	public String getTipoConsumidor() {
+		return tipoConsumidor;
+	}
+
+	public void setTipoConsumidor(String tipoConsumidor) {
+		this.tipoConsumidor = tipoConsumidor;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((categoria == null) ? 0 : categoria.hashCode());
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + ((faixa1 == null) ? 0 : faixa1.hashCode());
+		result = prime * result + ((faixa2 == null) ? 0 : faixa2.hashCode());
+		result = prime * result + ((faixa3 == null) ? 0 : faixa3.hashCode());
+		result = prime * result + ((faixa4 == null) ? 0 : faixa4.hashCode());
+		result = prime * result + ((faixa5 == null) ? 0 : faixa5.hashCode());
+		result = prime * result + ((taxaReg == null) ? 0 : taxaReg.hashCode());
+		result = prime * result + ((tipoConsumidor == null) ? 0 : tipoConsumidor.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Tarifa other = (Tarifa) obj;
+		if (categoria == null) {
+			if (other.categoria != null)
+				return false;
+		} else if (!categoria.equals(other.categoria))
+			return false;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		if (faixa1 == null) {
+			if (other.faixa1 != null)
+				return false;
+		} else if (!faixa1.equals(other.faixa1))
+			return false;
+		if (faixa2 == null) {
+			if (other.faixa2 != null)
+				return false;
+		} else if (!faixa2.equals(other.faixa2))
+			return false;
+		if (faixa3 == null) {
+			if (other.faixa3 != null)
+				return false;
+		} else if (!faixa3.equals(other.faixa3))
+			return false;
+		if (faixa4 == null) {
+			if (other.faixa4 != null)
+				return false;
+		} else if (!faixa4.equals(other.faixa4))
+			return false;
+		if (faixa5 == null) {
+			if (other.faixa5 != null)
+				return false;
+		} else if (!faixa5.equals(other.faixa5))
+			return false;
+		if (taxaReg == null) {
+			if (other.taxaReg != null)
+				return false;
+		} else if (!taxaReg.equals(other.taxaReg))
+			return false;
+		if (tipoConsumidor == null) {
+			if (other.tipoConsumidor != null)
+				return false;
+		} else if (!tipoConsumidor.equals(other.tipoConsumidor))
+			return false;
+		return true;
+	}
+
+	
+
+	
+	
+	
+	
+
+}

@@ -1,0 +1,24 @@
+
+
+{
+    "faixa_0a10": 58.24,
+    "faixa_11a20": 11.33,
+    "faixa_21a30": 21.72,
+    "faixa_31a50": 21.72,
+    "faixa_51": 22.62,
+    "taxaReg": 0.01,
+    "tipoConsumidor": "Comercial / Comum"
+}
+
+
+postgres://
+
+wtsxeoniqxqcjl
+:
+bd000709dd12897e7b7b81071a81ac1f3bef074e1be7ef881fcda7370f5b4738
+@
+ec2-52-0-114-209.compute-1.amazonaws.com
+:
+5432
+/
+deolklnjoie5gq

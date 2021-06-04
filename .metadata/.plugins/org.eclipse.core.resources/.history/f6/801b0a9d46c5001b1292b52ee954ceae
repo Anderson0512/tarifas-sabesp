@@ -1,0 +1,26 @@
+package com.api.tarifas.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Tarifa {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long codigo;
+	
+	private Double faixa1;
+	
+	private Double faixa2;
+	
+	private Double faixa3;
+	
+	private Double faixa4;
+	
+	private Double taxaReg;
+
+}
