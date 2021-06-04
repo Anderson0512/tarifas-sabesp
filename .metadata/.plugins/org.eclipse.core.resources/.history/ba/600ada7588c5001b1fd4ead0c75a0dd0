@@ -1,0 +1,10 @@
+package com.api.tarifas.config;
+
+public class HttpSecurity {
+
+	public Object cors() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

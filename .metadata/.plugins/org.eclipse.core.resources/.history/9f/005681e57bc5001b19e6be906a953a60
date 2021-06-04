@@ -1,0 +1,5 @@
+package com.api.tarifas.config;
+
+public class SecurityConfig {
+
+}
